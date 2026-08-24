@@ -1,0 +1,30 @@
+---
+title: "TypeScript SDK"
+description: "Install @twexapi-dev/x-api-scraper for typed TwexAPI REST calls in Node.js and TypeScript."
+---
+
+```bash
+npm install @twexapi-dev/x-api-scraper
+```
+
+```ts
+import { XApiScraper } from "@twexapi-dev/x-api-scraper";
+
+const client = new XApiScraper({
+  bearerAuth: process.env.X_API_SCRAPER_KEY ?? "",
+});
+
+const page = await client.search.advanced({
+  searchTerms: ["from:elonmusk"],
+  sortBy: "Latest",
+  nextCursor: "",
+});
+```
+
+Source: [x-api-scraper-typescript](https://github.com/twexapi-dev/x-api-scraper-typescript)
+
+Pi can load the packaged Skills:
+
+```bash
+pi install npm:@twexapi-dev/x-api-scraper
+```

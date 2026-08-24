@@ -1,0 +1,13 @@
+---
+title: "CLI"
+description: "Install the TwexAPI CLI for shell scripts and scheduled jobs."
+---
+
+```bash
+npm install -g @twexapi-dev/x-api-scraper-cli
+export X_API_SCRAPER_KEY='replace_me'
+
+x-api-scraper search tweets "from:elonmusk" --sort Latest
+```
+
+Use `--dry-run` on writes. Source: [x-api-scraper-cli](https://github.com/twexapi-dev/x-api-scraper-cli)

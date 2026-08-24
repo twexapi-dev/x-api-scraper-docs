@@ -1,0 +1,22 @@
+---
+title: "Python SDK"
+description: "Install x_api_scraper for typed TwexAPI REST calls in Python."
+---
+
+```bash
+pip install x_api_scraper
+```
+
+```python
+import os
+from x_api_scraper import XapiScraper
+
+with XapiScraper(bearer_auth=os.environ["X_API_SCRAPER_KEY"]) as client:
+    page = client.search.advanced(
+        search_terms=["from:elonmusk"],
+        sort_by="Latest",
+        next_cursor="",
+    )
+```
+
+Source: [x-api-scraper-python](https://github.com/twexapi-dev/x-api-scraper-python)

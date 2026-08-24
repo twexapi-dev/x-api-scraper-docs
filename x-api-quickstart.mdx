@@ -1,0 +1,53 @@
+---
+title: "TwexAPI quickstart"
+sidebarTitle: Quickstart
+description: "Create a TwexAPI key, authenticate with Bearer, and run the first tweet search. Public reads need no official X developer account."
+---
+
+Use this quickstart to make the first authenticated REST call.
+
+| Step | Call | Save |
+| --- | --- | --- |
+| Confirm the key | `GET /balance` | Remaining credits |
+| Search tweets | `POST /twitter/advanced_search/page` | `next_cursor` if present |
+
+## Before you start
+
+- Create an API key in the [TwexAPI dashboard](https://twexapi.io/dashboard)
+- Store it as `X_API_SCRAPER_KEY`
+- Use `https://api.twexapi.io` as the base URL
+- Send `Authorization: Bearer <key>`
+
+Public tweet, profile, search, follower, timeline, reply, quote, and trending reads use the API key only.
+
+Writes and private DM reads also need a Twitter cookie or `auth_token`. Confirm the exact target before those calls. See [Writes and private reads](/guides/writes-and-private-reads).
+
+<Steps>
+  <Step title="Create an API key">
+    Open the [dashboard](https://twexapi.io/dashboard) and create a key. Keep it in a secret manager. Do not commit it.
+  </Step>
+  <Step title="Check balance">
+    ```bash
+    export X_API_SCRAPER_KEY='replace_me'
+
+    curl --request GET 'https://api.twexapi.io/balance' \
+      --header "Authorization: Bearer ${X_API_SCRAPER_KEY}"
+    ```
+  </Step>
+  <Step title="Search tweets">
+    ```bash
+    curl --request POST 'https://api.twexapi.io/twitter/advanced_search/page' \
+      --header "Authorization: Bearer ${X_API_SCRAPER_KEY}" \
+      --header 'content-type: application/json' \
+      --data '{
+        "searchTerms": ["from:elonmusk"],
+        "sortBy": "Latest",
+        "next_cursor": ""
+      }'
+    ```
+
+    Operators such as `from:user`, `since:YYYY-MM-DD`, `until:YYYY-MM-DD`, and `lang:en` go inside `searchTerms`.
+  </Step>
+</Steps>
+
+Next: [Authentication](/api-reference/authentication), [Search guide](/guides/tweet-search), or [API overview](/api-reference/overview).

@@ -1,0 +1,37 @@
+---
+title: "Tweet search"
+description: "Search tweets with POST /twitter/advanced_search/page. Put X operators in searchTerms and paginate with next_cursor."
+---
+
+Use `POST /twitter/advanced_search/page`.
+
+Required body:
+
+| Field | Meaning |
+| --- | --- |
+| `searchTerms` | Array of query fragments. Combined into one X search. |
+| `sortBy` | `Latest` or `Top` |
+| `next_cursor` | Empty for the first page. Reuse the previous page value after that. |
+
+```bash
+curl --request POST 'https://api.twexapi.io/twitter/advanced_search/page' \
+  --header "Authorization: Bearer ${X_API_SCRAPER_KEY}" \
+  --header 'content-type: application/json' \
+  --data '{
+    "searchTerms": ["from:elonmusk", "lang:en"],
+    "sortBy": "Latest",
+    "next_cursor": ""
+  }'
+```
+
+Useful operators inside `searchTerms`:
+
+- `from:username`
+- `since:YYYY-MM-DD`
+- `until:YYYY-MM-DD`
+- `lang:en`
+- `filter:verified`
+
+Hashtags and cashtags also have dedicated routes: `POST /twitter/hashtags` and `POST /twitter/cashtags`.
+
+API page: [Advanced Twitter Search by Page](/api-reference/search/search-advanced)

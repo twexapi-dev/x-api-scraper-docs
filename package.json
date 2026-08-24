@@ -1,0 +1,9 @@
+{
+  "name": "x-api-scraper-docs",
+  "private": true,
+  "description": "TwexAPI documentation source for REST, MCP, SDKs, CLI, Terraform, and n8n. Not affiliated with X Corp.",
+  "scripts": {
+    "dev": "npx mintlify@latest dev",
+    "generate:api": "python3 scripts/generate-api-pages.py"
+  }
+}

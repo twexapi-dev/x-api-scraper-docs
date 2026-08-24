@@ -1,0 +1,10 @@
+---
+title: "Check DM Permissions"
+openapi: POST /v2/dm/status
+description: "Retrieves the Direct Message (DM) availability status for a list of users. This endpoint checks if the specified accounts can receive messages based on their privacy settings, follow status, or verified permissions."
+---
+
+<Warning>
+This route needs a Twitter cookie or `auth_token` in addition to the TwexAPI API key.
+Never send an X password or 2FA code.
+</Warning>

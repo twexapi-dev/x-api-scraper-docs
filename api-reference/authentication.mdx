@@ -1,0 +1,60 @@
+---
+title: "TwexAPI authentication"
+sidebarTitle: Authentication
+description: "Authenticate TwexAPI REST calls with Authorization Bearer. Public reads use an API key. Writes and private DMs also need a Twitter cookie or auth_token."
+---
+
+TwexAPI keys authenticate TwexAPI endpoints only. They are not an official X API token.
+
+## API key
+
+Create a key in the [dashboard](https://twexapi.io/dashboard). Store it as `X_API_SCRAPER_KEY`.
+
+Send it as a bearer token:
+
+<CodeGroup>
+
+```bash cURL
+curl https://api.twexapi.io/balance \
+  --header "Authorization: Bearer ${X_API_SCRAPER_KEY}"
+```
+
+```javascript Node.js
+const response = await fetch("https://api.twexapi.io/balance", {
+  headers: {
+    Authorization: `Bearer ${process.env.X_API_SCRAPER_KEY ?? ""}`,
+  },
+});
+```
+
+```python Python
+import os
+import requests
+
+response = requests.get(
+    "https://api.twexapi.io/balance",
+    headers={"Authorization": f"Bearer {os.environ['X_API_SCRAPER_KEY']}"},
+)
+```
+
+```go Go
+req.Header.Set("Authorization", "Bearer "+os.Getenv("X_API_SCRAPER_KEY"))
+```
+
+</CodeGroup>
+
+MCP also accepts `x-api-key` on `https://api.twexapi.io/mcp`. REST should use Bearer.
+
+## Public reads vs writes
+
+| Work | Credentials |
+| --- | --- |
+| Search, profiles, timelines, followers, replies, quotes, trending, communities, lists | API key |
+| Post, like, retweet, follow, bookmark, delete | API key plus cookie or `auth_token` |
+| Private DMs | API key plus cookie or `auth_token` |
+
+Never collect an X password or 2FA code. Confirm the account, target, and payload before writes.
+
+## Test the credential
+
+`GET https://api.twexapi.io/balance` is the health check used by the n8n credential and most SDKs.

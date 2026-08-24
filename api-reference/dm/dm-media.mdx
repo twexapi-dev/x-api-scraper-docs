@@ -1,0 +1,10 @@
+---
+title: "Get DM Media"
+openapi: POST /v3/twitter/dm-media
+description: "Fetch one XChat media attachment and return a playable URL. Use conversation_id, media_hash_key, and optional key_version from /v3/twitter/dm-history attachments."
+---
+
+<Warning>
+This route needs a Twitter cookie or `auth_token` in addition to the TwexAPI API key.
+Never send an X password or 2FA code.
+</Warning>

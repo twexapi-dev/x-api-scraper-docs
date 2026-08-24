@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  pages:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Regenerate API pages
+        run: python3 scripts/generate-api-pages.py
+      - name: Fail if generated pages drifted
+        run: git diff --exit-code -- api-reference scripts/api-navigation.json docs.json
+      - name: Check required files
+        run: test -f docs.json && test -f openapi.json && test -f index.mdx

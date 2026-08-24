@@ -1,0 +1,294 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "maple",
+  "name": "TwexAPI",
+  "description": "TwexAPI docs for tweet search, follower scraping, timelines, DMs, SDKs, MCP, CLI, Terraform, and n8n. Not affiliated with X Corp.",
+  "search": {
+    "prompt": "Search docs"
+  },
+  "colors": {
+    "primary": "#0F172A",
+    "light": "#334155",
+    "dark": "#F8FAFC"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://twexapi.io"
+  },
+  "favicon": "/favicon.svg",
+  "appearance": {
+    "default": "system"
+  },
+  "banner": {
+    "content": "**TwexAPI is not affiliated with or endorsed by X Corp.**",
+    "dismissible": false
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Dashboard",
+        "href": "https://twexapi.io/dashboard"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get API key",
+      "href": "https://twexapi.io/dashboard"
+    }
+  },
+  "api": {
+    "openapi": "openapi.json",
+    "playground": {
+      "display": "simple"
+    },
+    "examples": {
+      "languages": [
+        "curl",
+        "javascript",
+        "python",
+        "go"
+      ]
+    },
+    "mdx": {
+      "server": "https://api.twexapi.io",
+      "auth": {
+        "method": "bearer"
+      }
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guides",
+        "icon": "book-open",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "index",
+              "x-api-quickstart",
+              "api-reference/authentication"
+            ]
+          },
+          {
+            "group": "SDKs and clients",
+            "pages": [
+              "sdks",
+              "sdks/typescript",
+              "sdks/python",
+              "sdks/go",
+              "sdks/java",
+              "sdks/kotlin",
+              "sdks/csharp",
+              "sdks/ruby",
+              "sdks/php",
+              "sdks/cli",
+              "sdks/terraform",
+              "sdks/n8n"
+            ]
+          },
+          {
+            "group": "Workflows",
+            "pages": [
+              "guides/tweet-search",
+              "guides/follower-export",
+              "guides/writes-and-private-reads",
+              "guides/error-handling",
+              "guides/apify"
+            ]
+          },
+          {
+            "group": "MCP",
+            "pages": [
+              "mcp/overview",
+              "mcp/tools"
+            ]
+          },
+          {
+            "group": "Compare",
+            "pages": [
+              "twitter-api-alternatives",
+              "alternatives/x-api"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "security",
+              "non-affiliation",
+              "changelog"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API reference",
+        "icon": "square-terminal",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "api-reference/overview"
+            ]
+          },
+          {
+            "group": "Account",
+            "pages": [
+              "api-reference/account/account-get-balance"
+            ]
+          },
+          {
+            "group": "Analysis",
+            "pages": [
+              "api-reference/analysis/analysis-sentiment"
+            ]
+          },
+          {
+            "group": "Articles",
+            "pages": [
+              "api-reference/articles/articles-fetch",
+              "api-reference/articles/articles-markdown"
+            ]
+          },
+          {
+            "group": "Communities",
+            "pages": [
+              "api-reference/communities/communities-members",
+              "api-reference/communities/communities-members-page",
+              "api-reference/communities/communities-tweets",
+              "api-reference/communities/communities-tweets-page",
+              "api-reference/communities/communities-search",
+              "api-reference/communities/communities-get",
+              "api-reference/communities/communities-search-tweets"
+            ]
+          },
+          {
+            "group": "DM",
+            "pages": [
+              "api-reference/dm/dm-status",
+              "api-reference/dm/dm-send",
+              "api-reference/dm/dm-history",
+              "api-reference/dm/dm-media",
+              "api-reference/dm/dm-conversations"
+            ]
+          },
+          {
+            "group": "Lists",
+            "pages": [
+              "api-reference/lists/lists-tweets",
+              "api-reference/lists/lists-tweets-page",
+              "api-reference/lists/lists-subscribers",
+              "api-reference/lists/lists-members",
+              "api-reference/lists/lists-members-page",
+              "api-reference/lists/lists-search"
+            ]
+          },
+          {
+            "group": "Search",
+            "pages": [
+              "api-reference/search/search-advanced",
+              "api-reference/search/search-cashtags",
+              "api-reference/search/search-hashtags"
+            ]
+          },
+          {
+            "group": "Timelines",
+            "pages": [
+              "api-reference/timelines/timelines-tweets-and-replies",
+              "api-reference/timelines/timelines-user-page",
+              "api-reference/timelines/timelines-user",
+              "api-reference/timelines/timelines-tweets-and-replies-page"
+            ]
+          },
+          {
+            "group": "Trending",
+            "pages": [
+              "api-reference/trending/trending-countries",
+              "api-reference/trending/trending-topics",
+              "api-reference/trending/trending-contents",
+              "api-reference/trending/trending-tweets",
+              "api-reference/trending/trending-by-country"
+            ]
+          },
+          {
+            "group": "Tweets",
+            "pages": [
+              "api-reference/tweets/tweets-detail",
+              "api-reference/tweets/tweets-thread",
+              "api-reference/tweets/tweets-lookup",
+              "api-reference/tweets/tweets-similar"
+            ]
+          },
+          {
+            "group": "Tweet Actions",
+            "pages": [
+              "api-reference/tweet-actions/tweets-actions-like",
+              "api-reference/tweet-actions/tweets-actions-unlike",
+              "api-reference/tweet-actions/tweets-actions-retweet",
+              "api-reference/tweet-actions/tweets-actions-unretweet",
+              "api-reference/tweet-actions/tweets-actions-create-thread",
+              "api-reference/tweet-actions/tweets-actions-create",
+              "api-reference/tweet-actions/tweets-actions-quote",
+              "api-reference/tweet-actions/tweets-actions-create-without-cookie",
+              "api-reference/tweet-actions/tweets-actions-bookmark",
+              "api-reference/tweet-actions/tweets-actions-unbookmark",
+              "api-reference/tweet-actions/tweets-actions-delete-batch"
+            ]
+          },
+          {
+            "group": "Tweet Engagement",
+            "pages": [
+              "api-reference/tweet-engagement/tweets-engagement-retweeters",
+              "api-reference/tweet-engagement/tweets-engagement-retweeters-page",
+              "api-reference/tweet-engagement/tweets-engagement-quotes",
+              "api-reference/tweet-engagement/tweets-engagement-quotes-page"
+            ]
+          },
+          {
+            "group": "Tweet Replies",
+            "pages": [
+              "api-reference/tweet-replies/tweets-replies-page"
+            ]
+          },
+          {
+            "group": "Users",
+            "pages": [
+              "api-reference/users/users-get-by-usernames",
+              "api-reference/users/users-get-by-ids",
+              "api-reference/users/users-verify-account",
+              "api-reference/users/users-get-statuses",
+              "api-reference/users/users-search",
+              "api-reference/users/users-follow",
+              "api-reference/users/users-unfollow",
+              "api-reference/users/users-get-account-based",
+              "api-reference/users/users-get-about"
+            ]
+          },
+          {
+            "group": "Followers",
+            "pages": [
+              "api-reference/followers/users-followers-list",
+              "api-reference/followers/users-followers-verified"
+            ]
+          },
+          {
+            "group": "Following",
+            "pages": [
+              "api-reference/following/users-following-list"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/twexapi-dev/x-api-scraper-docs",
+      "website": "https://twexapi.io"
+    }
+  }
+}

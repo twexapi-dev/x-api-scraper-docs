@@ -1,0 +1,18 @@
+---
+title: "n8n community node"
+description: "Install n8n-nodes-x-api-scraper for tweet search, user lookup, trending tweets, profile about, and balance checks."
+---
+
+Install `n8n-nodes-x-api-scraper` from **Settings → Community Nodes**. Add a TwexAPI API credential. The node sends `Authorization: Bearer`.
+
+| Task | n8n operation | TwexAPI route |
+| --- | --- | --- |
+| Search tweets | Tweet: search | `POST /twitter/advanced_search/page` |
+| Search users | User: search | `GET /twitter/search-user/{keyword}/{target_count}` |
+| Look up a profile | User: get | `GET /twitter/{screen_name}/about` |
+| Read trending tweets | Trend: get | `GET /twitter/global-trending/tweets` |
+| View balance | Account: get balance | `GET /balance` |
+
+The node is read-only. Use REST or an SDK for follower pagination and approved posting.
+
+Source: [n8n-nodes-x-api-scraper](https://github.com/twexapi-dev/n8n-nodes-x-api-scraper)

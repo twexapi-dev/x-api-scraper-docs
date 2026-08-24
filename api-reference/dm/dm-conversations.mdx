@@ -1,0 +1,10 @@
+---
+title: "Get Conversations"
+openapi: POST /v3/twitter/conversations
+description: "Get XChat conversation list. Use count for page size (10–200). Set all=true to follow the inbox cursor and return every conversation."
+---
+
+<Warning>
+This route needs a Twitter cookie or `auth_token` in addition to the TwexAPI API key.
+Never send an X password or 2FA code.
+</Warning>

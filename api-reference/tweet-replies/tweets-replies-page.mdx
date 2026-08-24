@@ -1,0 +1,5 @@
+---
+title: "Get Replies by Page"
+openapi: POST /twitter/tweets/{tweet_id}/replies/page
+description: "**Recommended** for fetching tweet replies. Uses cursor-based pagination and avoids timeouts on large threads. The first request (omit next_cursor) returns root_tweet plus the first batch of replies. Pass next_cursor from the previous response to fetch the next page until has_next_page is false. Pricing: $0.10 per 1,000 replies."
+---

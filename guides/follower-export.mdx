@@ -1,0 +1,35 @@
+---
+title: "Follower lists"
+description: "Paginate followers and following with v3 routes. Public follower lists use the API key only."
+---
+
+Use the v3 list routes. They do not need a cookie.
+
+| Task | Route |
+| --- | --- |
+| Followers | `POST /v3/twitter/users/followers` |
+| Following | `POST /v3/twitter/users/following` |
+| Verified followers | `POST /v3/twitter/users/verified-followers` |
+
+Body fields:
+
+| Field | Meaning |
+| --- | --- |
+| `username` | Screen name, with or without `@` |
+| `count` | Page size, 10 to 100 |
+| `cursor` | Previous `next_cursor`, or omit for the first page |
+
+```bash
+curl --request POST 'https://api.twexapi.io/v3/twitter/users/followers' \
+  --header "Authorization: Bearer ${X_API_SCRAPER_KEY}" \
+  --header 'content-type: application/json' \
+  --data '{
+    "username": "elonmusk",
+    "count": 50,
+    "cursor": ""
+  }'
+```
+
+Store stable user IDs, collection time, and the cursor. Deduplicate on IDs. Keep a deletion plan for collected profiles.
+
+Follow and unfollow are separate write routes and need a cookie or `auth_token`.

@@ -1,0 +1,63 @@
+---
+title: "TwexAPI X (Twitter) Scraper API"
+sidebarTitle: Home
+description: "Search tweets, read profiles, paginate followers, and run approved X actions through TwexAPI REST, SDKs, MCP, CLI, Terraform, n8n, or Apify. Not affiliated with X Corp."
+---
+
+TwexAPI is an X (Twitter) Scraper API and X API alternative. Search tweets, read profiles, paginate followers, and run approved account actions.
+
+You need an `X_API_SCRAPER_KEY` from the [dashboard](https://twexapi.io/dashboard). You do not need an official X developer account for supported public reads.
+
+Private reads and X account actions also need a Twitter cookie or `auth_token` on the request. Never send an X password or 2FA code.
+
+## First request
+
+```bash
+export X_API_SCRAPER_KEY='replace_me'
+
+curl --request POST 'https://api.twexapi.io/twitter/advanced_search/page' \
+  --header "Authorization: Bearer ${X_API_SCRAPER_KEY}" \
+  --header 'content-type: application/json' \
+  --data '{
+    "searchTerms": ["from:elonmusk"],
+    "sortBy": "Latest",
+    "next_cursor": ""
+  }'
+```
+
+Pass `next_cursor` from the previous page unchanged to fetch the next page.
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="terminal" href="/x-api-quickstart">
+    Create a key and confirm authentication with `GET /balance`.
+  </Card>
+  <Card title="Search tweets" icon="search" href="/api-reference/search/search-advanced">
+    `POST /twitter/advanced_search/page` with `searchTerms` and `sortBy`.
+  </Card>
+  <Card title="MCP" icon="bot" href="/mcp/overview">
+    Hosted MCP at `https://api.twexapi.io/mcp` with `explore` and `twexapi_request`.
+  </Card>
+  <Card title="SDKs" icon="package" href="/sdks">
+    TypeScript, Python, Go, Java, Kotlin, C#, Ruby, PHP, CLI, Terraform, and n8n.
+  </Card>
+</CardGroup>
+
+## What the REST API covers
+
+The OpenAPI contract used by the SDKs currently documents **66** operations:
+
+| Area | Typical routes |
+| --- | --- |
+| Search | Advanced search, hashtags, cashtags |
+| Users | Profile about, user search, batch lookup |
+| Followers | v3 followers, following, verified followers |
+| Timelines | User timeline pages, tweets and replies |
+| Tweets | Detail, lookup, thread, similar tweets, replies, quotes |
+| Trending | Countries, topics, content tags, trending tweets |
+| Communities and lists | Search, members, tweets, subscribers |
+| Account | `GET /balance` |
+| Writes and DMs | Post, like, retweet, follow, bookmark, v3 DMs |
+
+Deleted, protected, restricted, or unavailable content may stay inaccessible. TwexAPI omits unavailable optional fields. It never invents missing content.
+
+TwexAPI is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.

@@ -1,0 +1,44 @@
+---
+title: "TwexAPI REST overview"
+sidebarTitle: Overview
+description: "TwexAPI REST base URL, Bearer auth, 66 OpenAPI operations, cursor pagination, and cookie requirements for writes."
+---
+
+Base URL: `https://api.twexapi.io`
+
+The OpenAPI document used by the SDKs currently lists **66** HTTP operations. Recheck the live spec before relying on counts.
+
+```text
+https://github.com/twexapi-dev/x-api-scraper-typescript/blob/main/openapi.sdk.json
+```
+
+This repository copies that contract as [`openapi.json`](/openapi.json).
+
+## Authentication
+
+Send `Authorization: Bearer <X_API_SCRAPER_KEY>`. See [Authentication](/api-reference/authentication).
+
+## Pagination
+
+Cursor routes return a `next_cursor` (or equivalent) from the previous page. Send it back unchanged. Leave it empty for the first page.
+
+Follower v3 lists use `username`, optional `count` (10-100), and `cursor`.
+
+User search uses path parameters: `GET /twitter/search-user/{keyword}/{target_count}`.
+
+## Timeline and tweet detail methods
+
+These two methods are easy to get wrong:
+
+| Task | Method and path |
+| --- | --- |
+| User timeline page | `POST /twitter/{screen_name}/timeline/page` |
+| Tweet detail | `POST /v2/tweet/detail` |
+
+They are not GET.
+
+## Writes
+
+Tweet actions, follow/unfollow, and v3 DM routes need a cookie or `auth_token` in addition to the API key. The generated pages mark those operations.
+
+TwexAPI has no documented webhook, monitor, OAuth CIMD, or guest-wallet API in this OpenAPI. Do not invent those routes.

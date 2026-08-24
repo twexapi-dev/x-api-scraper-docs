@@ -1,0 +1,17 @@
+---
+title: "Errors and empty results"
+description: "TwexAPI omits unavailable optional fields. Missing tweets or users usually mean the content is gone, protected, or out of credit."
+---
+
+TwexAPI does not invent missing tweets, users, or metrics.
+
+| Situation | Typical cause |
+| --- | --- |
+| Empty `data` | No matches, exhausted cursor, or unavailable content |
+| Validation `422` | Wrong path or body field |
+| Auth failure | Missing or invalid Bearer token |
+| Write rejection | Missing cookie/`auth_token`, or the user did not confirm |
+
+Deleted, protected, restricted, or unavailable content may stay inaccessible. Optional JSON fields can be null or omitted.
+
+If a page looks short, check credits with `GET /balance` and retry with the last unchanged cursor only when the previous response returned one.

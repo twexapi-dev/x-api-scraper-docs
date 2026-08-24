@@ -1,0 +1,10 @@
+---
+title: "Get DM History"
+openapi: POST /v3/twitter/dm-history
+description: "Get DM history via XChat encrypted chat API. Use count for page size (10–200). Set all=true to follow has_more and return every page. Or paginate manually: when has_more is true, pass the oldest message's sequence_id as before."
+---
+
+<Warning>
+This route needs a Twitter cookie or `auth_token` in addition to the TwexAPI API key.
+Never send an X password or 2FA code.
+</Warning>

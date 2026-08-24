@@ -1,0 +1,34 @@
+---
+title: "TwexAPI MCP tools"
+sidebarTitle: Tools
+description: "explore lists allowed TwexAPI routes. twexapi_request calls one whitelisted relative path."
+---
+
+The hosted server does not expose one MCP tool per REST operation. It uses two bounded tools.
+
+## `explore`
+
+Discover allowed routes, methods, and parameter names. Use this before calling an unfamiliar path.
+
+## `twexapi_request`
+
+Call one whitelisted relative path. Typical arguments:
+
+| Argument | Meaning |
+| --- | --- |
+| `path` | Relative path such as `/twitter/advanced_search/page` |
+| `method` | HTTP method |
+| `query` | Query string fields |
+| `body` | JSON body for POST routes |
+
+Example search body:
+
+```json
+{
+  "searchTerms": ["from:elonmusk"],
+  "sortBy": "Latest",
+  "next_cursor": ""
+}
+```
+
+Timeline pages use `POST /twitter/{screen_name}/timeline/page`. Tweet detail uses `POST /v2/tweet/detail`.
