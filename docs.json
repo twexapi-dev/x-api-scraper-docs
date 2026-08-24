@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "TwexAPI",
-  "description": "TwexAPI docs for tweet search, follower scraping, timelines, DMs, SDKs, MCP, CLI, Terraform, and n8n. Not affiliated with X Corp.",
+  "description": "TwexAPI docs for tweet search, follower scraping, timelines, DMs, SDKs, MCP, CLI, Terraform, n8n, and Prefect. Not affiliated with X Corp.",
   "search": {
     "prompt": "Search docs"
   },
@@ -88,7 +88,8 @@
               "sdks/php",
               "sdks/cli",
               "sdks/terraform",
-              "sdks/n8n"
+              "sdks/n8n",
+              "sdks/prefect"
             ]
           },
           {
