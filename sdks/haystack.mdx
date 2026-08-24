@@ -1,0 +1,19 @@
+---
+title: "Haystack components"
+description: "Install x-api-scraper-haystack for tweet search and user timelines in Haystack RAG pipelines."
+---
+
+Install `x-api-scraper-haystack`. Components read `X_API_SCRAPER_KEY` and send `Authorization: Bearer`.
+
+```bash
+pip install x-api-scraper-haystack
+```
+
+| Task | Haystack component | TwexAPI route |
+| --- | --- | --- |
+| Search tweets | `TwexApiTweetSearch` | `POST /twitter/advanced_search/page` |
+| Read a timeline page | `TwexApiUserTweetsFetcher` | `POST /twitter/{screen_name}/timeline/page` |
+
+Each result becomes a Haystack `Document`. The collection is read-only. Use REST or an SDK for follower pagination and approved posting.
+
+Source: [x-api-scraper-haystack](https://github.com/twexapi-dev/x-api-scraper-haystack)
