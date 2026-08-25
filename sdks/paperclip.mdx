@@ -1,0 +1,23 @@
+---
+title: "Paperclip plugin"
+description: "Install @twexapi/paperclip-plugin-x-api-scraper for agent tools that search tweets, read profiles, timelines, and trends."
+---
+
+Install `@twexapi/paperclip-plugin-x-api-scraper` in Paperclip. The plugin reads a TwexAPI API key from a Paperclip secret and sends `Authorization: Bearer`.
+
+```bash
+paperclipai plugin install @twexapi/paperclip-plugin-x-api-scraper
+```
+
+| Agent task | Paperclip tool | TwexAPI route |
+| --- | --- | --- |
+| Search tweets | `twexapi.search_tweets` | `POST /twitter/advanced_search/page` |
+| Read one tweet | `twexapi.lookup_tweet` | `POST /v2/tweet/detail` |
+| Search users | `twexapi.search_users` | `GET /twitter/search-user/{keyword}/{target_count}` |
+| Read a profile | `twexapi.get_user` | `GET /twitter/{screen_name}/about` |
+| Read profile tweets | `twexapi.get_user_tweets` | `POST /twitter/{screen_name}/timeline/page` |
+| Read trending tweets | `twexapi.get_trends` | `GET /twitter/global-trending/tweets` |
+
+The plugin is read-only. Use REST or an SDK for follower pagination and approved posting.
+
+Source: [paperclip-plugin-x-api-scraper](https://github.com/twexapi-dev/paperclip-plugin-x-api-scraper)

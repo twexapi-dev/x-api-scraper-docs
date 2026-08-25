@@ -1,6 +1,6 @@
 {
   "projectTitle": "TwexAPI docs",
-  "description": "TwexAPI documentation for REST API, MCP, SDKs, CLI, Terraform, n8n, Prefect, Haystack, and X/Twitter public reads plus approved writes. Not affiliated with X Corp.",
+  "description": "TwexAPI documentation for REST API, MCP, SDKs, CLI, Terraform, n8n, Prefect, Haystack, Paperclip, and X/Twitter public reads plus approved writes. Not affiliated with X Corp.",
   "branch": "main",
   "rules": [
     "Not affiliated with X Corp.",

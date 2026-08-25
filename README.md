@@ -5,7 +5,7 @@
 
 Documentation for [TwexAPI](https://twexapi.io), an X (Twitter) Scraper API and X API alternative. Intended for **[docs.twexapi.io](https://docs.twexapi.io)**.
 
-This repository covers REST, MCP, SDKs, CLI, Terraform, n8n, Prefect, Haystack, and Apify. The OpenAPI contract currently documents **66** operations.
+This repository covers REST, MCP, SDKs, CLI, Terraform, n8n, Prefect, Haystack, Paperclip, and Apify. The OpenAPI contract currently documents **66** operations.
 
 ## Start here
 
@@ -35,6 +35,7 @@ python3 scripts/generate-api-pages.py
 - [n8n node](https://github.com/twexapi-dev/n8n-nodes-x-api-scraper)
 - [Prefect collection](https://github.com/twexapi-dev/prefect-x-api-scraper)
 - [Haystack components](https://github.com/twexapi-dev/x-api-scraper-haystack)
+- [Paperclip plugin](https://github.com/twexapi-dev/paperclip-plugin-x-api-scraper)
 
 ## License
 
