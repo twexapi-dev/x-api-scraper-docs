@@ -3,7 +3,7 @@
 > TwexAPI is an independent third-party service. Not affiliated with X Corp.
 > "Twitter" and "X" are trademarks of X Corp.
 
-Documentation for [TwexAPI](https://twexapi.io), an X (Twitter) Scraper API and X API alternative. Intended for **[docs.twexapi.io](https://docs.twexapi.io)**.
+Documentation for [TwexAPI](https://twexapi.io), covering structured public social data and approved account workflows. Intended for **[docs.twexapi.io](https://docs.twexapi.io)**.
 
 This repository covers REST, MCP, SDKs, CLI, Terraform, n8n, Prefect, Haystack, Paperclip, and Apify. The OpenAPI contract currently documents **66** operations.
 
