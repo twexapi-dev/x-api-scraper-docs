@@ -3,7 +3,7 @@
   "info": {
     "title": "X API Scraper",
     "version": "1.0.0",
-    "description": "Speakeasy-ready OpenAPI document for the x-api-scraper TypeScript SDK.\n\nThe SDK wraps TwexAPI's X/Twitter API surface with bearer-token authentication.\nCookie/proxy based endpoints are excluded except tweet actions, follow/unfollow, and v3 DM operations.\nPaid engagement services, profile mutation, legacy-only operations, and non-v3 follower/following endpoints remain excluded.\n\nNot affiliated with X Corp.",
+    "description": "Speakeasy-ready OpenAPI document for the x-api-scraper TypeScript SDK.\n\nThe SDK wraps TwexAPI's X/Twitter API surface with bearer-token authentication.\nCookie/proxy based endpoints are excluded except tweet actions, follow/unfollow, and v3 DM operations.\nProfile mutation, legacy-only operations, and non-v3 follower/following endpoints remain excluded.\n\nNot affiliated with X Corp.",
     "license": {
       "name": "MIT"
     }
