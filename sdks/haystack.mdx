@@ -14,6 +14,6 @@ pip install x-api-scraper-haystack
 | Search tweets | `TwexApiTweetSearch` | `POST /twitter/advanced_search/page` |
 | Read a timeline page | `TwexApiUserTweetsFetcher` | `POST /twitter/{screen_name}/timeline/page` |
 
-Each result becomes a Haystack `Document`. The collection is read-only. Use REST or an SDK for follower pagination and approved posting.
+Each result becomes a Haystack `Document`. The collection is read-only. Use REST or an SDK for follower pagination and other public reads.
 
 Source: [x-api-scraper-haystack](https://github.com/twexapi-dev/x-api-scraper-haystack)

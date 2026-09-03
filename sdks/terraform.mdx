@@ -1,8 +1,8 @@
 ---
 title: "Terraform provider"
-description: "Manage TwexAPI follow, tweet, like, retweet, bookmark, and DM resources as infrastructure."
+description: "Use the TwexAPI Terraform provider with an API key for profile and tweet data sources. Public docs focus on reads."
 ---
 
 Provider: [twexapi-dev/x-api-scraper](https://registry.terraform.io/providers/twexapi-dev/x-api-scraper/latest)
 
-Writes still need cookie or `auth_token` input where the resource requires it.
+Public docs focus on API-key reads. Prefer data sources such as user about and tweet lookup. For search, follower pagination, and other reads, use the [REST API](/api-reference/overview) or a [language SDK](/sdks).

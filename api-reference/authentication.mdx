@@ -1,7 +1,7 @@
 ---
 title: "TwexAPI authentication"
 sidebarTitle: Authentication
-description: "Authenticate TwexAPI REST calls with Authorization Bearer. Public reads use an API key. Writes and private DMs also need a Twitter cookie or auth_token."
+description: "Authenticate TwexAPI REST calls with Authorization Bearer and an API key for public reads."
 ---
 
 TwexAPI keys authenticate TwexAPI endpoints only. They are not an official X API token.
@@ -45,15 +45,7 @@ req.Header.Set("Authorization", "Bearer "+os.Getenv("X_API_SCRAPER_KEY"))
 
 MCP also accepts `x-api-key` on `https://api.twexapi.io/mcp`. REST should use Bearer.
 
-## Public reads vs writes
-
-| Work | Credentials |
-| --- | --- |
-| Search, profiles, timelines, followers, replies, quotes, trending, communities, lists | API key |
-| Post, like, retweet, follow, bookmark, delete | API key plus cookie or `auth_token` |
-| Private DMs | API key plus cookie or `auth_token` |
-
-Never collect an X password or 2FA code. Confirm the account, target, and payload before writes.
+Public search, profiles, timelines, followers, replies, quotes, trending, communities, and lists use the API key only. Never collect an X password or 2FA code.
 
 ## Test the credential
 

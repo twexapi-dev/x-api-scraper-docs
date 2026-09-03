@@ -1,14 +1,12 @@
 ---
 title: "TwexAPI X (Twitter) Scraper API"
 sidebarTitle: Home
-description: "Search tweets, read profiles, paginate followers, and run approved X actions through TwexAPI REST, SDKs, MCP, CLI, Terraform, n8n, Prefect, Haystack, Paperclip, or Apify. Not affiliated with X Corp."
+description: "Search tweets, read profiles, paginate followers, and call TwexAPI REST, SDKs, MCP, CLI, Terraform, n8n, Prefect, Haystack, Paperclip, or Apify with an API key. Not affiliated with X Corp."
 ---
 
-TwexAPI is an X (Twitter) Scraper API and X API alternative. Search tweets, read profiles, paginate followers, and run approved account actions.
+TwexAPI is an X (Twitter) Scraper API and X API alternative. Search tweets, read profiles, and paginate followers with one API key.
 
 You need an `X_API_SCRAPER_KEY` from the [dashboard](https://twexapi.io/dashboard). You do not need an official X developer account for supported public reads.
-
-Private reads and X account actions also need a Twitter cookie or `auth_token` on the request. Never send an X password or 2FA code.
 
 ## First request
 
@@ -44,7 +42,7 @@ Pass `next_cursor` from the previous page unchanged to fetch the next page.
 
 ## What the REST API covers
 
-The OpenAPI contract used by the SDKs currently documents **66** operations:
+The OpenAPI contract used by the SDKs currently documents **66** operations. Public docs focus on API-key public reads:
 
 | Area | Typical routes |
 | --- | --- |
@@ -56,7 +54,6 @@ The OpenAPI contract used by the SDKs currently documents **66** operations:
 | Trending | Countries, topics, content tags, trending tweets |
 | Communities and lists | Search, members, tweets, subscribers |
 | Account | `GET /balance` |
-| Writes and DMs | Post, like, retweet, follow, bookmark, v3 DMs |
 
 Deleted, protected, restricted, or unavailable content may stay inaccessible. TwexAPI omits unavailable optional fields. It never invents missing content.
 

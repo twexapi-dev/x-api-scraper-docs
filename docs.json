@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "TwexAPI",
-  "description": "TwexAPI docs for tweet search, follower scraping, timelines, DMs, SDKs, MCP, CLI, Terraform, n8n, Prefect, Haystack, and Paperclip. Not affiliated with X Corp.",
+  "description": "TwexAPI docs for tweet search, follower scraping, timelines, SDKs, MCP, CLI, Terraform, n8n, Prefect, Haystack, and Paperclip. Not affiliated with X Corp.",
   "search": {
     "prompt": "Search docs"
   },
@@ -99,7 +99,6 @@
             "pages": [
               "guides/tweet-search",
               "guides/follower-export",
-              "guides/writes-and-private-reads",
               "guides/error-handling",
               "guides/apify"
             ]
@@ -170,16 +169,6 @@
             ]
           },
           {
-            "group": "DM",
-            "pages": [
-              "api-reference/dm/dm-status",
-              "api-reference/dm/dm-send",
-              "api-reference/dm/dm-history",
-              "api-reference/dm/dm-media",
-              "api-reference/dm/dm-conversations"
-            ]
-          },
-          {
             "group": "Lists",
             "pages": [
               "api-reference/lists/lists-tweets",
@@ -227,22 +216,6 @@
             ]
           },
           {
-            "group": "Tweet Actions",
-            "pages": [
-              "api-reference/tweet-actions/tweets-actions-like",
-              "api-reference/tweet-actions/tweets-actions-unlike",
-              "api-reference/tweet-actions/tweets-actions-retweet",
-              "api-reference/tweet-actions/tweets-actions-unretweet",
-              "api-reference/tweet-actions/tweets-actions-create-thread",
-              "api-reference/tweet-actions/tweets-actions-create",
-              "api-reference/tweet-actions/tweets-actions-quote",
-              "api-reference/tweet-actions/tweets-actions-create-without-cookie",
-              "api-reference/tweet-actions/tweets-actions-bookmark",
-              "api-reference/tweet-actions/tweets-actions-unbookmark",
-              "api-reference/tweet-actions/tweets-actions-delete-batch"
-            ]
-          },
-          {
             "group": "Tweet Engagement",
             "pages": [
               "api-reference/tweet-engagement/tweets-engagement-retweeters",
@@ -265,24 +238,17 @@
               "api-reference/users/users-verify-account",
               "api-reference/users/users-get-statuses",
               "api-reference/users/users-search",
-              "api-reference/users/users-follow",
-              "api-reference/users/users-unfollow",
               "api-reference/users/users-get-account-based",
               "api-reference/users/users-get-about"
             ]
           },
           {
             "group": "Followers",
-            "pages": [
-              "api-reference/followers/users-followers-list",
-              "api-reference/followers/users-followers-verified"
-            ]
+            "pages": []
           },
           {
             "group": "Following",
-            "pages": [
-              "api-reference/following/users-following-list"
-            ]
+            "pages": []
           }
         ]
       }

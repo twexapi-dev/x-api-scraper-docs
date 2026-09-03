@@ -2,7 +2,7 @@
 
 > TwexAPI is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.
 
-TwexAPI is an X (Twitter) Scraper API. Public reads use Authorization Bearer. Writes and private DMs need a cookie or auth_token. Never collect X passwords.
+TwexAPI is an X (Twitter) Scraper API. Public reads use Authorization Bearer and an API key. Public docs focus on reads. Never collect X passwords.
 
 Current OpenAPI lists 66 REST operations. MCP tools are explore and twexapi_request at https://api.twexapi.io/mcp.
 Timeline pages use POST /twitter/{screen_name}/timeline/page. Tweet detail uses POST /v2/tweet/detail.
@@ -23,11 +23,6 @@ Do not document webhooks, monitors, or OAuth CIMD.
 - https://docs.twexapi.io/api-reference/communities/communities-search-tweets
 - https://docs.twexapi.io/api-reference/communities/communities-tweets
 - https://docs.twexapi.io/api-reference/communities/communities-tweets-page
-- https://docs.twexapi.io/api-reference/dm/dm-conversations
-- https://docs.twexapi.io/api-reference/dm/dm-history
-- https://docs.twexapi.io/api-reference/dm/dm-media
-- https://docs.twexapi.io/api-reference/dm/dm-send
-- https://docs.twexapi.io/api-reference/dm/dm-status
 - https://docs.twexapi.io/api-reference/followers/users-followers-list
 - https://docs.twexapi.io/api-reference/followers/users-followers-verified
 - https://docs.twexapi.io/api-reference/following/users-following-list
@@ -50,17 +45,6 @@ Do not document webhooks, monitors, or OAuth CIMD.
 - https://docs.twexapi.io/api-reference/trending/trending-countries
 - https://docs.twexapi.io/api-reference/trending/trending-topics
 - https://docs.twexapi.io/api-reference/trending/trending-tweets
-- https://docs.twexapi.io/api-reference/tweet-actions/tweets-actions-bookmark
-- https://docs.twexapi.io/api-reference/tweet-actions/tweets-actions-create
-- https://docs.twexapi.io/api-reference/tweet-actions/tweets-actions-create-thread
-- https://docs.twexapi.io/api-reference/tweet-actions/tweets-actions-create-without-cookie
-- https://docs.twexapi.io/api-reference/tweet-actions/tweets-actions-delete-batch
-- https://docs.twexapi.io/api-reference/tweet-actions/tweets-actions-like
-- https://docs.twexapi.io/api-reference/tweet-actions/tweets-actions-quote
-- https://docs.twexapi.io/api-reference/tweet-actions/tweets-actions-retweet
-- https://docs.twexapi.io/api-reference/tweet-actions/tweets-actions-unbookmark
-- https://docs.twexapi.io/api-reference/tweet-actions/tweets-actions-unlike
-- https://docs.twexapi.io/api-reference/tweet-actions/tweets-actions-unretweet
 - https://docs.twexapi.io/api-reference/tweet-engagement/tweets-engagement-quotes
 - https://docs.twexapi.io/api-reference/tweet-engagement/tweets-engagement-quotes-page
 - https://docs.twexapi.io/api-reference/tweet-engagement/tweets-engagement-retweeters
@@ -70,21 +54,18 @@ Do not document webhooks, monitors, or OAuth CIMD.
 - https://docs.twexapi.io/api-reference/tweets/tweets-lookup
 - https://docs.twexapi.io/api-reference/tweets/tweets-similar
 - https://docs.twexapi.io/api-reference/tweets/tweets-thread
-- https://docs.twexapi.io/api-reference/users/users-follow
 - https://docs.twexapi.io/api-reference/users/users-get-about
 - https://docs.twexapi.io/api-reference/users/users-get-account-based
 - https://docs.twexapi.io/api-reference/users/users-get-by-ids
 - https://docs.twexapi.io/api-reference/users/users-get-by-usernames
 - https://docs.twexapi.io/api-reference/users/users-get-statuses
 - https://docs.twexapi.io/api-reference/users/users-search
-- https://docs.twexapi.io/api-reference/users/users-unfollow
 - https://docs.twexapi.io/api-reference/users/users-verify-account
 - https://docs.twexapi.io/changelog
 - https://docs.twexapi.io/guides/apify
 - https://docs.twexapi.io/guides/error-handling
 - https://docs.twexapi.io/guides/follower-export
 - https://docs.twexapi.io/guides/tweet-search
-- https://docs.twexapi.io/guides/writes-and-private-reads
 - https://docs.twexapi.io/index
 - https://docs.twexapi.io/mcp/overview
 - https://docs.twexapi.io/mcp/tools

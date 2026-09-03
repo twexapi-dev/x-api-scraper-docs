@@ -10,7 +10,7 @@ TwexAPI does not invent missing tweets, users, or metrics.
 | Empty `data` | No matches, exhausted cursor, or unavailable content |
 | Validation `422` | Wrong path or body field |
 | Auth failure | Missing or invalid Bearer token |
-| Write rejection | Missing cookie/`auth_token`, or the user did not confirm |
+| Credit or plan limit | Out of credits or plan QPS |
 
 Deleted, protected, restricted, or unavailable content may stay inaccessible. Optional JSON fields can be null or omitted.
 
